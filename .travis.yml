@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - '8'
-  - '10'
 dist: trusty
 addons:
   chrome: stable
@@ -10,6 +9,7 @@ before_install:
 services:
   - mongodb
   - redis-server
+  - xvfb
 env:
   - NODE_ENV=ci PORT=3000
 cache:
