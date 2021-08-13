@@ -9,7 +9,6 @@ before_install:
 services:
   - mongodb
   - redis-server
-  - xvfb
 env:
   - NODE_ENV=ci PORT=3000
 cache:
