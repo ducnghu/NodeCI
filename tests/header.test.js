@@ -17,7 +17,7 @@ afterEach(async () => {
 it('show the correct header text', async () => {
     const text = await page.getContentsOf('a.brand-logo')
 
-    expect(text).toEqual('Blogsters')
+    expect(text).toEqual('Blogster')
 })
 
 it('click login oauth flow', async () => {
