@@ -11,7 +11,7 @@ afterEach(async () => {
     await page.close()
 })
 
-describe('When logged in', async () => {
+describe('When logged in', () => {
     beforeEach(async () => {
         await page.login()
         await page.goto('http://localhost:3000/blogs')
@@ -26,7 +26,7 @@ describe('When logged in', async () => {
         expect(label).toEqual('Blog Title')
     })
     
-    describe('When using valid form inputs', async () => {
+    describe('When using valid form inputs', () => {
         beforeEach(async () => {
             await page.type('.title input', 'This is test title')
             await page.type('.content input', 'This is test content')
@@ -52,7 +52,7 @@ describe('When logged in', async () => {
 
     })
     
-    describe('When using invalid form inputs', async () => {
+    describe('When using invalid form inputs', () => {
         beforeEach(async () => {
             await page.click('form button')
         })
@@ -68,7 +68,7 @@ describe('When logged in', async () => {
     })
 })
 
-describe('When not logged in', async () => {
+describe('When not logged in', () => {
     const actions = [
         {
             method: 'get',
