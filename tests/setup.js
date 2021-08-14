@@ -10,3 +10,7 @@ mongoose.connect(keys.mongoURI, {
   useFindAndModify: false,
   useCreateIndex: true
 });
+
+afterAll(() => {
+  mongoose.disconnect()
+})
