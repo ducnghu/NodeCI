@@ -37,7 +37,7 @@ class CustomPage {
 
         await this.page.goto('http://localhost:3000')
 
-        await this.page.waitFor('a[href="/auth/logout"]')
+        await this.page.waitForSelector('a[href="/auth/logout"]')
     
     }
 
